@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | JR Electradrive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --red: #E31E24;
+            --dark-bg: #121212;
+            --white: #ffffff;
+            --gray: #b3b3b3;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--white);
+            line-height: 1.6;
+        }
+
+        header {
+            background: rgba(18, 18, 18, 0.98);
+            border-bottom: 3px solid var(--red);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo img { height: 60px; width: auto; }
+
+        .nav-links { display: flex; list-style: none; }
+        .nav-links li { margin-left: 30px; }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--white);
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .services-header {
+            padding: 150px 5% 50px;
+            text-align: center;
+        }
+
+        .services-header h1 {
+            font-size: 3rem;
+            font-weight: 900;
+        }
+
+        /* HEXAGON GRID SYSTEM */
+        .hexagon-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            padding: 0 5% 100px;
+            max-width: 1200px;
+            margin: 0 auto;
+            perspective: 1000px; /* Essential for 3D flip */
+        }
+
+        /* The Flip Card Logic */
+        .hex-card {
+            width: 280px;
+            height: 320px;
+            cursor: pointer;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+
+        .hex-card:hover {
+            transform: rotateY(180deg);
+        }
+
+        .hex-front, .hex-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 30px;
+        }
+
+        /* Front Side Styling */
+        .hex-front {
+            background: #1c1c1e;
+            border: 2px solid #333;
+        }
+
+        .hex-front h3 {
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        .hex-icon {
+            font-size: 2.5rem;
+            color: var(--red);
+        }
+
+        /* Back Side Styling */
+        .hex-back {
+            background: var(--red);
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        .hex-back p {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .hex-back .btn-mini {
+            margin-top: 15px;
+            padding: 8px 15px;
+            background: white;
+            color: var(--red);
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 768px) {
+            .hex-card { width: 240px; height: 280px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><img src="e57fb09b-db12-4a2b-b3ca-77a7db54df98.png" alt="JR ELECTRADRIVE"></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html" style="color: var(--red);">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+	            <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="order.html">Book Service</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="services-header">
+            <h1>OUR <span style="color:var(--red)">SPECIALTIES</span></h1>
+            <p>Click or hover a hexagon to learn more.</p>
+        </div>
+
+        <section class="hexagon-container">
+            
+            <div class="hex-card">
+                <div class="hex-front">
+                    <div class="hex-icon">⚡</div>
+                    <h3>Diagnostics</h3>
+                </div>
+                <div class="hex-back">
+                    <p>Using dealer-level diagnostic tools to pinpoint complex electrical faults in modern ECU systems.</p>
+                    <a href="order.html" class="btn-mini">Book Now</a>
+                </div>
+            </div>
+
+            <div class="hex-card">
+                <div class="hex-front">
+                    <div class="hex-icon">🔌</div>
+                    <h3>Harness Repair</h3>
+                </div>
+                <div class="hex-back">
+                    <p>Expert restoration of burnt, damaged, or corroded wiring harnesses to factory standards.</p>
+                    <a href="order.html" class="btn-mini">Book Now</a>
+                </div>
+            </div>
+
+            <div class="hex-card">
+                <div class="hex-front">
+                    <div class="hex-icon">⚙️</div>
+                    <h3>Alternators</h3>
+                </div>
+                <div class="hex-back">
+                    <p>Precision repair and testing of starters and alternators for heavy-duty trucks and domestic 
+cars.</p>
+                    <a href="order.html" class="btn-mini">Book Now</a>
+                </div>
+            </div>
+
+            <div class="hex-card">
+                <div class="hex-front">
+                    <div class="hex-icon">🚛</div>
+                    <h3>Truck & Trailer</h3>
+                </div>
+                <div class="hex-back">
+                    <p>Full electrical maintenance for fleets, including trailer lighting and specialized truck circuits.</p>
+                    <a href="order.html" class="btn-mini">Book Now</a>
+                </div>
+            </div>
+
+            <div class="hex-card">
+                <div class="hex-front">
+                    <div class="hex-icon">🛑</div>
+                    <h3>EBS Systems</h3>
+                </div>
+                <div class="hex-back">
+                    <p>Fault finding and repair of Electronic Braking Systems and ABS modules for safety assurance.</p>
+                    <a href="order.html" class="btn-mini">Book Now</a>
+                </div>
+            </div>
+
+            <div class="hex-card">
+                <div class="hex-front">
+                    <div class="hex-icon">🔋</div>
+                    <h3>Battery Systems</h3>
+                </div>
+                <div class="hex-back">
+                    <p>Comprehensive charging system analysis and high-performance battery installation.</p>
+                    <a href="order.html" class="btn-mini">Book Now</a>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <div style="height: 50px; background: var(--red); clip-path: polygon(0 80%, 100% 0, 100% 100%, 0% 100%);"></div>
+
+</body>
+</html>

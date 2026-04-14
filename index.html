@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JR Electradrive | Auto Electrical Specialists</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --red: #E31E24;
+            --dark-bg: #121212;
+            --white: #ffffff;
+            --gray: #b3b3b3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* NAVIGATION - Improved spacing */
+        header {
+            background: rgba(18, 18, 18, 0.98);
+            border-bottom: 3px solid var(--red);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5%; /* Reduced padding for a sleeker bar */
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* LOGO - Made bigger and clearer */
+        .logo img {
+            height: 70px; /* Increased from 50px */
+            width: auto;
+            display: block;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--white);
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--red);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+            background: radial-gradient(circle, rgba(227,30,36,0.15) 0%, rgba(18,18,18,1) 100%);
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin-top: 60px; /* Space for the fixed header */
+        }
+
+        .tagline {
+            font-style: italic;
+            font-weight: 700;
+            color: var(--red);
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            display: block;
+            text-transform: uppercase;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 20px;
+            letter-spacing: -2px;
+        }
+
+        .text-red {
+            color: var(--red);
+        }
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* BUTTONS */
+        .btn-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 18px 40px;
+            text-decoration: none;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s ease;
+            border-radius: 0; /* Squared edges look more "industrial" */
+        }
+
+        .btn-primary {
+            background-color: var(--red);
+            color: white;
+            border: 2px solid var(--red);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+      .btn-primary:hover {
+            background-color: white;
+            color: var(--red);
+            border-color: white;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--red);
+            border-color: var(--red);
+        }
+
+        /* FOOTER STRIPE */
+        .slanted-bg {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 120px;
+            background: linear-gradient(45deg, var(--red) 0%, #8b1216 100%);
+            clip-path: polygon(0 85%, 100% 0, 100% 100%, 0% 100%);
+            z-index: -1;
+        }
+
+        /* MOBILE FIXES */
+        @media (max-width: 768px) {
+            .navbar { flex-direction: column; padding: 20px; }
+            .nav-links { margin-top: 15px; }
+            .nav-links li { margin: 0 10px; }
+            .hero-content h1 { font-size: 2.8rem; }
+            .btn { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="e57fb09b-db12-4a2b-b3ca-77a7db54df98.png" alt="JR ELECTRADRIVE">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="order.html">Book A Service</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <span class="tagline">Redefining Vehicle Electrical Excellence</span>
+                <h1>AUTO ELECTRICAL <br><span class="text-red">SERVICES</span></h1>
+                <p>Based in Harare, we specialize in diagnostics, wiring, and professional electrical repairs to keep your vehicle running at peak performance.</p>
+                
+                <div class="btn-group">
+                    <a href="services.html" class="btn btn-primary">Our Services</a>
+                    <a href="https://wa.me/263787747619" class="btn btn-secondary">Book On WhatsApp</a>
+                </div>
+            </div>
+            <div class="slanted-bg"></div>
+        </section>
+    </main>
+
+</body>
+</html>
